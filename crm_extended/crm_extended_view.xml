@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- inherited CRM form view for res_partner -->
+        <record id="view_crm_lead_form_extend" model="ir.ui.view">
+            <field name="name">view.crm.lead.form.extend</field>
+            <field name="model">crm.lead</field>
+            <field name="priority" eval="8" />
+            <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='contact_name']" position="before">
+                    <field name="create_contact" attrs="{'invisible': [('partner_id','=',False)]}"/>
+                    <button name="create_contact_ext" string="Create Contact" type="object" attrs="{'invisible': [('create_contact','=',False)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

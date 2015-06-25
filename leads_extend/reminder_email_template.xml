@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Schedule Sample FollowUp template -->
+        <record id="crm.email_template_lead_reminder" model="email.template">
+            <field name="name">Meeting Invitation</field>
+           <field name="subject">${object.user_id.name} - Reminder</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="email_to" >${object.user_id.email}</field>
+            <field name="email_from" >${object.user_id.email}</field>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">${object.user_id.lang}</field>
+            <field name="body_html"><![CDATA[
+                <div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); ">
+                    <p>Hello,<strong>${object.user_id.name}</strong></p> 
+
+                    <p style="margin-left:12px">That is a reminder for the event below :${object.name} </p>
+                    <br/><br/>
+                    Thanks,<br/>
+                    Administrator.
+                </div>
+            ]]></field>
+        </record>
+        
+        <!-- Schedule Sample FollowUp template -->
+        <record id="crm.email_template_schedule_reminder" model="email.template">
+            <field name="name">Meeting Invitation</field>
+           <field name="subject">${object.user_id.name} - Reminder</field>
+            <field name="model_id" ref="crm.model_crm_phonecall"/>
+            <field name="email_to" >${object.user_id.email}</field>
+            <field name="email_from" >${object.user_id.email}</field>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">${object.user_id.lang}</field>
+            <field name="body_html"><![CDATA[
+                <div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); ">
+                    <p>Hello,<strong>${object.user_id.name}</strong></p> 
+
+                    <p style="margin-left:12px">That is a reminder for the event below :${object.name} </p>
+                    <br/><br/>
+                    Thanks,<br/>
+                    Administrator.
+                </div>
+            ]]></field>
+        </record>
+    </data>
+</openerp>

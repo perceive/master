@@ -1,19 +1,16 @@
 
 {
-    'name': 'Leads Management',
+    'name': 'Sale Management',
     'version': '1.1',
     'category': 'Sales',
     'sequence': 18,
-    'summary': 'Leads Management',
-    'depends': ['crm','calendar'],
+    'summary': 'Sale Management',
+    'depends': ['sale'],
     'description': """
-
+    Merge Quotation and sales order menu
     """,
     'data': [
-        'leads_extend.xml',
-        'leads_reminder_cron.xml',
-        'reminder_email_template.xml',
-        'crm_lead_hide.xml'
+        'sale_view.xml',
         ],
     'demo': [],
     'installable': True,

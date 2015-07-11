@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+         <!-- Remove Quotation Menu-->
+         <delete model="ir.ui.menu" id="sale.menu_sale_quotations">
+         </delete>
+
+         <!-- Remove domain from sales order-->
+
+         <record id="sale.action_orders_salesteams" model="ir.actions.act_window">
+            <field name="domain"></field>
+        </record>
+
+        <record id="sale.action_orders" model="ir.actions.act_window">
+            <field name="domain"></field>
+        </record>
+    </data>
+</openerp>

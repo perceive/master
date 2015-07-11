@@ -48,35 +48,7 @@
                 </xpath>
             </field>
         </record>
-        
-        
-        <record model="ir.ui.view" id="view_calendar_event_form_lead">
-            <field name="name">Calendar - Event Form Lead</field>
-            <field name="model">calendar.event</field>
-            <field name="inherit_id" ref="calendar.view_calendar_event_form"/>
-            <field name="arch" type="xml">
-                <xpath expr="//form/sheet/notebook/page[@string='Meeting Details']/group/group/field[@name='stop_date']" position="after">
-                        <field name="leave_behinds"/>
-                </xpath>
-            </field>
-        </record>
-        
-        <record id="view_calendar_event_search_lead" model="ir.ui.view">
-            <field name="name">CRM - Meetings Search</field>
-            <field name="model">calendar.event</field>
-            <field name="inherit_id" ref="calendar.view_calendar_event_search"/>
-            <field name="arch" type="xml">
-                <xpath expr="//search/filter[@string='My Events']" position="after">
-                    <field name="leave_behinds"/>
-                    <filter icon="terp-go-today" string="Leave Behinds" help="Leave Behinds"/>
-                </xpath>
-                <xpath expr="//search/group/filter[@string='Responsible']" position="after">
-                    <filter string="Leave Behinds" icon="terp-personal" domain="[]" context="{'group_by':'leave_behinds'}"/>
-                </xpath>
-            </field>
-    </record>
-    
-        
+
     </data>
  </openerp>
     

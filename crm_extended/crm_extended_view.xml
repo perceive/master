@@ -15,6 +15,17 @@
                 </xpath>
             </field>
         </record>
-
+        <!-- inherited calender form view to rename Tags to  Meeting Type-->
+        <record id="view_crm_meeting_event_form_extend" model="ir.ui.view">
+            <field name="name">view.crm.meeting.event.form.extend</field>
+            <field name="model">calendar.event</field>
+            <field name="priority" eval="8" />
+            <field name="inherit_id" ref="calendar.view_calendar_event_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='categ_ids']" position="replace">
+                    <field name="categ_ids" widget="many2many_tags" string="Meeting Type"/>
+                </xpath>
+            </field>
+        </record>
     </data>
 </openerp>

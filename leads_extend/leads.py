@@ -9,20 +9,6 @@ import pytz
 from openerp.tools import DEFAULT_SERVER_DATETIME_FORMAT
 from openerp import netsvc
 
-class leave_behinds(osv.Model):
-    _name = "leave.behinds"
-    _description = ""
-    _columns = {
-        'name' : fields.char('Name', required=True),
-    }
-    
-class calendar_event(osv.Model):
-    """ Model for Calendar Event """
-    _inherit = 'calendar.event'
-    _columns = {
-        'leave_behinds' : fields.many2one('leave.behinds','Leave Behinds'),
-    }
-    
 class crm_phonecall(osv.osv):
     """ Model for CRM phonecalls """
     _inherit = "crm.phonecall"

@@ -5,7 +5,9 @@
     'version': '1.0',
     'category': 'sale',
     'summary': 'CRM extended',
-    'description': """ """,
+    'description': """
+    1. Rename the Tags -> Meeting Type
+    """,
     'author': 'Perceive ERP',
     'website': 'http://www.perceivetechnologies.com',
     'images': [],

@@ -13,7 +13,8 @@
         'leads_extend.xml',
         'leads_reminder_cron.xml',
         'reminder_email_template.xml',
-        'crm_lead_hide.xml'
+        'crm_lead_hide.xml',
+        'partner_view.xml',
         ],
     'demo': [],
     'installable': True,

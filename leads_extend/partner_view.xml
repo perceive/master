@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_inherit_calendar_inherited">
+            <field name="name">view.inherit.calendar.inherited</field>
+            <field name="model">calendar.event</field>
+            <field name="inherit_id" ref="calendar.view_calendar_event_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/field[@name='state']" position="after">
+                    <div class="oe_right oe_button_box" name="import_buttons">
+                           <button name="%(crm.crm_case_category_act_oppor11)d" string="Opportunities"
+                                   type="action" class="oe_inline oe_stat_button"
+                                    icon="fa-star"/>
+                        </div>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="view_partners_form_crm12" model="ir.ui.view">
+            <field name="name">view.res.partner.form.crm.inherited12</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="crm.view_partners_form_crm1"/>
+            <field name="arch" type="xml">
+                <data>
+                    <button name="schedule_meeting" position="replace">
+                        <button class="oe_inline oe_stat_button" type="object"
+                            name="schedule_meeting"
+                            icon="fa-calendar"
+                            context="{'partner_id': active_id}">
+                            <field string="Schedule Events" name="meeting_count" widget="statinfo"/>
+                        </button>
+                    </button>
+                    <button name="%(crm.crm_case_categ_phone_incoming0)d" position="replace">
+                        <button class="oe_inline oe_stat_button" type="action"
+                            name="%(crm.crm_case_categ_phone_incoming0)d"
+                            icon="fa-phone"
+                            context="{'search_default_partner_id': active_id, 'default_duration': 1.0}" invisible = '1'>
+                            <field string="Calls" name="phonecall_count" widget="statinfo" invisible="1"/>
+                        </button>
+                    </button>
+                </data>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>

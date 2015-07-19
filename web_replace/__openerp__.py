@@ -12,7 +12,7 @@ OpenERP Web view.
     'depends': ['base','web','web_kanban','base_import','mail','account'],
     'data' : [
          'views/web_view_replace.xml',
-         'ob_web_replace_view.xml'
+         'web_replace_view.xml'
     ],
     'qweb': ['static/src/xml/web_replace.xml'],
     'auto_install': True,

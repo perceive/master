@@ -19,6 +19,6 @@
 #
 ##############################################################################
 import controllers
-import ob_web_replace
+import web_replace
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

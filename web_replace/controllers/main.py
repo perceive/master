@@ -65,7 +65,7 @@ class Database_Password(openerp.addons.web.controllers.main.Database):
     @http.route('/web/database/manager', type='http', auth="none")
     def manager(self, **kw):
         request.session.logout()
-        loader = jinja2.PackageLoader('openerp.addons.ob_web_replace', "views")
+        loader = jinja2.PackageLoader('openerp.addons.web_replace', "views")
         env = jinja2.Environment(loader=loader, autoescape=True)
         return env.get_template("database_manager.html").render({
                 'modules': simplejson.dumps(module_boot()),

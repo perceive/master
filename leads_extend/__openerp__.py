@@ -3,6 +3,7 @@
     'name': 'Leads Management',
     'version': '1.1',
     'category': 'Sales',
+    'author': 'Perceive ERP',
     'sequence': 18,
     'summary': 'Leads Management',
     'depends': ['crm','calendar'],

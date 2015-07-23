@@ -3,6 +3,7 @@
     'name': 'Sale Management',
     'version': '1.1',
     'category': 'Sales',
+    'author': 'Perceive ERP',
     'sequence': 18,
     'summary': 'Sale Management',
     'depends': ['sale'],

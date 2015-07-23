@@ -7,7 +7,7 @@ OpenERP Web view.
 ==========================
 
 """,
-    'author': '',
+    'author': 'Perceive ERP',
     'version': '2.0',
     'depends': ['base','web','web_kanban','base_import','mail','account'],
     'data' : [

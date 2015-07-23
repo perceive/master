@@ -2,6 +2,7 @@
 {
     'name': 'Sample Management Type',
     'version': '2.0',
+    'author': 'Perceive ERP',
     'category': 'Sale Management',
     'description': """
     Sample Type Master for both inventory sample and non-inventory sample

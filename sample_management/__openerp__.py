@@ -2,6 +2,7 @@
 {
     'name': 'Sample Management',
     'version': '2.0',
+    'author': 'Perceive ERP',
     'category': 'Sale Management',
     'description': """
     To keep track the quantity of how many sample of which sample type is sent to customer.And what would be the follow up date for that.
